@@ -1,0 +1,5 @@
+Wishlist:
+
+1. Paginate the comments
+2. Add a helpful/not-helpful feature to comments
+3. Convert documentation to RST documentation 

@@ -1,0 +1,13 @@
+	<table width="100%" cellpadding="0" cellspacing="0" id="comments_table">
+	{%for x in comments%}
+		<tr class="resultrow">
+			<td width="13%" class="resultcell {% cycle 'odd' 'even' %}" style="padding-left:5px;" valign="top">				
+				<span class="author" style="font-size:1.3em;">{{x.userId}}</span><br>
+			</td>
+			<td width="35%" class="resultcell {% cycle 'odd' 'even' %}" valign="top" style="padding-right:7px;" align="justify">
+				<!--<span style="font-size:1.4em;font-weight:400;color:#036">{{x.title|title}}</span><br>-->
+				<span style="font-size:1.2em;">{{x.comment}}</span>
+			</td>
+		</tr>
+	{%endfor%}
+	</table>

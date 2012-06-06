@@ -1,0 +1,37 @@
+								{%ifequal num 0%}
+									<div class="rating1">&nbsp;(No student rating yet)</div>
+								{%else%}
+									{%if average_rating == 1.0%}
+										<div class="rating1"><img src="/public/10.gif"/>(by {{num}} people)</div>
+									{%else%}
+										{%if average_rating <= 1.5%}
+											<div class="rating1"><img src="/public/15.gif"/>(by {{num}} people)</div>
+										{%else%}
+											{%if average_rating <= 2.0%}
+												<div class="rating1"><img src="/public/20.gif"/>(by {{num}} people)</div>
+											{%else%}
+												{%if average_rating <= 2.5%}
+													<div class="rating1"><img src="/public/25.gif"/>(by {{num}} people)</div>
+												{%else%}
+													{%if average_rating <= 3.0%}
+														<div class="rating1"><img src="/public/30.gif"/>(by {{num}} people)</div>
+													{%else%}
+														{%if average_rating <= 3.5%}
+															<div class="rating1"><img src="/public/35.gif"/>(by {{num}} people)</div>
+														{%else%}
+															{%if average_rating <= 4.0%}
+																<div class="rating1"><img src="/public/40.gif"/>(by {{num}} people)</div>
+															{%else%}
+																{%if average_rating <= 4.5%}
+																	<div class="rating1"><img src="/public/45.gif"/>(by {{num}} people)</div>
+																{%else%}
+																	<div class="rating1"><img src="/public/50.gif"/>(by {{num}} people)</div>
+																{%endif%}
+															{%endif%}
+														{%endif%}
+													{%endif%}
+												{%endif%}
+											{%endif%}
+										{%endif%}
+									{%endif%}
+								{%endifequal%}

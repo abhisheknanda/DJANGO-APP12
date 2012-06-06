@@ -1,0 +1,41 @@
+{%extends "base.html"%}
+{%block content%}
+<title>DJANGO Plug-in</title>
+	<link type="text/css" rel="stylesheet" href="/public/style.css">
+</head>
+
+	<table style="width:100%;margin-top:10px;">
+		<tr style="width:100%;">
+			<td style="width:180px;vertical-align:top;">
+				<div style="width:100%">
+					<div style="text-align:center;padding:15px;border:2px solid #888d91;background-color:#ececec;">
+						<img src="/public/book.jpg"/><br><br>	
+					</div>
+				</div>
+			</td>
+			<td valign="top">
+				<div style="font-size:1.2em;color:blue;font-weight:700;">
+					<table border="0" cellspacing="5" class="bookdisplay1" style="font-size:0.8em;color:black;font-weight:700;">
+						<tr><td>ISBN</td><td>&nbsp;ITY5648TVHUHS</td></tr> <!-- dummy id, should be modified appropriately-->
+						<tr></tr> <tr></tr> <tr></tr>
+						<tr><td>Current Rating</td><td>{%include "show_average_rating.html"%}</td></tr>
+						<tr></tr> <tr></tr> <tr></tr>
+						<tr><td>Give your Rating!</td><td>{%include "rate_object.html"%}</td></tr>
+						<tr>
+							<td> <div style="color:red;font-size:0.8em" id="rating_message"></div> </td>
+						</tr>
+						<tr><td> <a id="login_star1" href="javascript:ajax_post_tag()">Tag</a> : </td> <td> {%include "post_new_tag.html"%}</td></tr>
+					</table>
+				</div>
+			</td>
+			<td>
+				{%include "show_tags.html"%}
+			</td>
+		</tr>
+	</table>
+	<br/> <br/>
+	{%include "post_new_comment.html"%}
+
+	{%include "show_comments.html"%}
+
+{%endblock%}

@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<!--[if !IE]><!-->
+		<link type="text/css" rel="stylesheet" href="/public/style.css">
+		<!--<![endif]-->
+		<!--[if IE]>
+		<link type="text/css" rel="stylesheet" href="/public/styleIE.css">
+		<![endif]-->
+		<link type="text/css" rel="stylesheet" href="/public/autocomplete.css">
+		<script type="text/javascript" src="/public/script.js"></script>
+		<script type="text/javascript" src="/public/jquery.js"></script>
+		<script type="text/javascript" src="/public/autocomplete.js"></script>
+		<script type="text/javascript" src="/public/localdata.js"></script>
+		<script type="text/javascript" src="/public/jquery.floatdialog.js"></script>	
+		<script type="text/javascript">
+			$().ready(function() {
+				//$("#searchField").autocomplete('/ajax_get_autocomplete/');
+				$("#searchField").autocomplete(terms);
+			})
+		</script>
+	</head>
+	<body>
+		<script>		
+
+		var browser=navigator.appName;
+		var b_version=navigator.appVersion;
+		var version=parseFloat(b_version);
+		if (browser=="Internet Explorer")
+  	{
+  		window.location = "/alt_home/";
+			alert("This website cannot be viewed using Microsoft Internet Explorer");
+  	}
+
+</script>
+		<div id="outerdoc">
+			<div id="doc4" style="background-color:#ececec;">
+				
+				  <div class="doc-wrapper2"></div>
+				  <div class="doc-wrapper3"></div>
+				  <div class="doc-wrapper4">
+				    <div id="bd">
+							<div id="header">
+								<table style="width:100%;"><tr>
+									<td style="text-align:left;font-size:0.90em;">
+										<a>DJANGO Plug-In</b> | <b> Rating/Commenting/Tagging </b> </a>
+									</td>
+									<td style="text-align:right;font-size:0.90em;">
+											Released under the <a id="login" href="http://www.gnu.org/licenses/lgpl.txt">GNU Public License</a> 
+									</td>
+								</tr></table>
+							</div>
+							{%block content%}{%endblock%}<br>
+							<div id="footer">
+								<div id="footer_left" style="text-align:center;background-color:#ececec">
+					  			 This program is free software: you can redistribute it and/or modify
+    it under the terms of the <b> GNU General Public License </b> as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version. <br/> <br/>
+	
+	    This program is distributed in the hope that it will be useful,
+    but <b> WITHOUT ANY WARRANTY </b>; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+								</div>
+	
+							</div>
+							<div style="clear:left;"></div>
+							<script>$("#login").floatdialog("login_dialog", {effect: false});</script>
+						</div>
+					</div>
+			</div>
+		</div>
+	</body>
+</html>
